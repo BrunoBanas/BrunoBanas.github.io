@@ -1,13 +1,11 @@
 /**
  * Typography & Text styles
  */
-
-/* html is set to 62.5% so that all the REM measurements are based on 10px sizing. So basically 1.5rem = 15px */
-html {
+ html {
   font-size: 62.5%;
 }
 body {
-  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  font-size: 1.5em; 
   line-height: 1.6;
   font-weight: 400;
   font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -20,10 +18,10 @@ body {
 a {
   font-weight: normal;
   text-decoration: none; 
-  color:#EF6D3D;
+  color: #EF6D3D;
 }
 a:focus {
-  outline: solid;/*thin dotted;*/
+  outline: solid;
 }
 
 small {
@@ -33,14 +31,9 @@ small {
 /**
  * Headings
  */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   line-height: 1;
-  text-rendering: optimizeLegibility; /*  voodoo to enable ligatures and kerning | https://developer.mozilla.org/en-US/docs/CSS/text-rendering */
+  text-rendering: optimizeLegibility; 
   margin-top: 0;
   margin-bottom: 2rem;
   font-weight: 300;
@@ -56,57 +49,45 @@ h6 { font-size: 1.4rem; line-height: 1.6;  letter-spacing: 0; }
  * Paragraphs
  */
 p {
-  margin: 0 auto 1.5em auto; /* bottom margin for paragraphs */
-}
-p + p {
-
-}
-
-/**
- * Quotes & Blockquotes
- */
-q {
-  quotes: '\00201C' '\00201D';
-}
-q:before {
-  content: open-quote;
-}
-q:after {
-  content: close-quote;
-}
-
-blockquote {
-  /*background-color: #F8F8F8;*/
-  border-left: 2px solid #AFC0D2;
-  margin: 1.6em 10%;
-  padding: .75em 1em;
-  font-size:1.8rem;
-}
-blockquote p:last-child {
-  margin-bottom: 0;  
+  margin: 0 auto 1.5em auto;
 }
 
 /**
  * Layout styles
  */
-
-/* Full size background image */
-html, #container, .inner { background-color:transparent;}
+html, #container, .inner {
+  background-color:transparent;
+}
 html {
+  padding-top: 100px;
   background:url(Background2.png) center center no-repeat fixed;
   background-size:cover;
 }
 body {
-  max-width:800px;
-  margin:25px auto;
+  max-width: 800px;
+  margin: 25px auto;
+  padding-top: 40px; /* Adjust this value based on the height of your header */
 }
-header, #content, footer { 
-  background: rgba(0,0,0,.8); 
-  padding:30px;
-  color:#FFFFFF; 
+#content, footer { 
+  background: rgba(0, 0, 0, .8); 
+  padding: 30px;
+  color: #FFFFFF;
+}
+header {
+
+  padding: 10px;
+  color: #FFFFFF;
+  position: fixed; /* Fix the header at the top of the page */
+  top: 0;          /* Align it to the top */
+  left: 0;         /* Align it to the left */
+  width: 100%;     /* Make it full width */
+  background: rgba(0, 0, 0, 1); /* Semi-transparent background */
+  z-index: 1000;  /* Ensure it stays above other content */
 }
 
-/* Main menu */
+/**
+ * Main menu
+ */
 ul.main-menu {
   display: flex;
   flex-wrap: wrap;
@@ -129,7 +110,6 @@ ul.main-menu li a {
 
 ul.main-menu li:hover > a {
   color: #FFFFFF;
-  border-bottom: 3px solid #EF6D3D;
 }
 
 /* Dropdown menu */
@@ -138,7 +118,7 @@ ul.dropdown-menu {
   top: 100%;
   left: 0;
   background-color: rgba(0, 0, 0, 0.8);
-  display: none; /* Hidden by default */
+  display: none;
   flex-direction: column;
   list-style: none;
   margin: 0;
@@ -163,7 +143,7 @@ ul.dropdown-menu li a:hover {
 
 /* Show dropdown on hover */
 ul.main-menu li:hover ul.dropdown-menu {
-  display: block; /* Show dropdown when hovering over the main link */
+  display: block;
 }
 
 /* Mobile Styling for dropdown */
@@ -174,7 +154,7 @@ ul.main-menu li:hover ul.dropdown-menu {
   }
 
   ul.dropdown-menu {
-    position: static; /* Stack dropdowns in mobile */
+    position: static;
     display: none;
     width: 100%;
   }
@@ -184,6 +164,23 @@ ul.main-menu li:hover ul.dropdown-menu {
   }
 }
 
+/**
+ * Section and Subsection Styling
+ */
+.content-region {
+  margin-bottom: 30px;
+}
+
+.sub-content {
+  margin-left: 20px;
+}
+
+/**
+ * Smooth Scrolling
+ */
+html {
+  scroll-behavior: smooth;
+}
 
 /* Utility classes */
 .hide {
@@ -192,6 +189,3 @@ ul.main-menu li:hover ul.dropdown-menu {
 .show {
   display:block;
 }
-
-
-

@@ -25,40 +25,41 @@
     
   </head>
   <body>
-
     <header id="header">
       <img src="">
       <h1>About ME</h1>
   
       <!-- Main menu with dropdowns -->
       <ul class="main-menu">
-        <li><a href="#home">Home</a></li>
+        <li><a href="#home" class="menu-link">Home</a></li>
   
         <li class="dropdown">
-          <a href="#research">Research</a>
+          <a href="#research" class="menu-link">Research</a>
           <!-- Dropdown for Research Subsections -->
           <ul class="dropdown-menu">
-            <li><a href="#research-subsection1">Project 1</a></li>
-            <li><a href="#research-subsection2">Project 2</a></li>
-            <li><a href="#research-subsection3">Project 3</a></li>
+            <li><a href="#research-subsection1" class="menu-link">Project 1</a></li>
+            <li><a href="#research-subsection2" class="menu-link">Project 2</a></li>
+            <li><a href="#research-subsection3" class="menu-link">Project 3</a></li>
           </ul>
         </li>
   
         <li class="dropdown">
-          <a href="#interest">Interests</a>
+          <a href="#interests" class="menu-link">Interests</a>
           <!-- Dropdown for Interests Subsections -->
           <ul class="dropdown-menu">
-            <li><a href="#interest-subsection1">Hobbies</a></li>
-            <li><a href="#interest-subsection2">Travel</a></li>
+            <li><a href="#interest-subsection1" class="menu-link">Hobbies</a></li>
+            <li><a href="#interest-subsection2" class="menu-link">Travel</a></li>
           </ul>
         </li>
   
         <li class="dropdown">
-          <a href="#dofe">Duke of Edinburgh</a>
-          <!-- Dropdown for Duke of Edinburgh Subsections -->
+          <a href="#dofe" class="menu-link">Education</a>
+          <!-- Dropdown for Education Subsections -->
           <ul class="dropdown-menu">
-            <li><a href="#dofe-subsection1">Bronze</a></li>
-            <li><a href="#dofe-subsection2">Silver</a></li>
+            <li><a href="#dofe-subsection1" class="menu-link">Gymnasium</a></li>
+            <li><a href="#dofe-subsection2" class="menu-link">High-school</a></li>
+            <li><a href="#dofe-subsection3" class="menu-link">Bachelor</a></li>
+            <li><a href="#dofe-subsection4" class="menu-link">Masters</a></li>
           </ul>
         </li>
       </ul>
@@ -69,7 +70,7 @@
         <div id="content">
   
           <!-- Home Section -->
-          <div id="home" class="content-region hide">
+          <div id="home" class="content-region">
             <h2>Home</h2>
             <p>This is a simple website describing me</p>
             <img src="resume.jpg">
@@ -80,17 +81,17 @@
             <h2>Research</h2>
             <p>Summary of my research</p>
   
-            <div id="research-subsection1">
+            <div id="research-subsection1" class="sub-content">
               <h3>Project 1</h3>
               <p>Details about research project 1.</p>
             </div>
   
-            <div id="research-subsection2">
+            <div id="research-subsection2" class="sub-content">
               <h3>Project 2</h3>
               <p>Details about research project 2.</p>
             </div>
   
-            <div id="research-subsection3">
+            <div id="research-subsection3" class="sub-content">
               <h3>Project 3</h3>
               <p>Details about research project 3.</p>
             </div>
@@ -100,12 +101,12 @@
           <div id="interests" class="content-region hide">
             <h2>Interests outside of physics</h2>
   
-            <div id="interest-subsection1">
+            <div id="interest-subsection1" class="sub-content">
               <h3>Hobbies</h3>
               <p>Details about my hobbies.</p>
             </div>
   
-            <div id="interest-subsection2">
+            <div id="interest-subsection2" class="sub-content">
               <h3>Travel</h3>
               <p>Details about places I've traveled to.</p>
             </div>
@@ -113,17 +114,27 @@
   
           <!-- Duke of Edinburgh Section with Subsections -->
           <div id="dofe" class="content-region hide">
-            <h2>Duke of Edinburgh Award</h2>
-            <p>Overview of my Duke of Edinburgh achievements.</p>
+            <h2>Education background</h2>
+            <p>Overview of my journey through the education system.</p>
   
-            <div id="dofe-subsection1">
-              <h3>Bronze</h3>
-              <p>Details about my Bronze Award experience.</p>
+            <div id="dofe-subsection1" class="sub-content">
+              <h3>Gymnasium</h3>
+              <p>Details about my initial High-school experience</p>
             </div>
   
-            <div id="dofe-subsection2">
-              <h3>Silver</h3>
-              <p>Details about my Silver Award experience.</p>
+            <div id="dofe-subsection2" class="sub-content">
+              <h3>A-levels</h3>
+              <p>UK, redhill</p>
+            </div>
+
+            <div id="dofe-subsection3" class="sub-content">
+              <h3>Bachelor</h3>
+              <p>Netherlands</p>
+            </div>
+
+            <div id="dofe-subsection4" class="sub-content">
+              <h3>Masters</h3>
+              <p>Germany, Belgium, US</p>
             </div>
           </div>
   
@@ -140,5 +151,7 @@
     <script type="text/javascript" src="script.js"></script>
   
   </body>
+  
+  
   
 </html>
