@@ -23,7 +23,7 @@ a {
   color:#EF6D3D;
 }
 a:focus {
-  outline: thin dotted;
+  outline: solid;/*thin dotted;*/
 }
 
 small {
@@ -102,32 +102,88 @@ body {
 }
 header, #content, footer { 
   background: rgba(0,0,0,.8); 
-  padding:25px;
+  padding:30px;
   color:#FFFFFF; 
 }
 
-/* Menu Links */
+/* Main menu */
 ul.main-menu {
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
+
+ul.main-menu li {
+  position: relative;
+}
+
 ul.main-menu li a {
-  margin-right:20px;
-  font-size:2.0rem;
-  border-bottom: solid transparent 3px;
-  color:#cfd2da;
+  font-size: 2.0rem;
+  margin-right: 20px;
+  text-decoration: none;
+  color: #cfd2da;
+  padding: 10px;
 }
-ul.main-menu li a:hover {
-  color:#FFFFFF;
+
+ul.main-menu li:hover > a {
+  color: #FFFFFF;
+  border-bottom: 3px solid #EF6D3D;
 }
-ul.main-menu li a.active {
-  color:#FFFFFF;
-  border-bottom-color:#EF6D3D;
+
+/* Dropdown menu */
+ul.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  z-index: 1000;
 }
+
+ul.dropdown-menu li {
+  margin-bottom: 5px;
+}
+
+ul.dropdown-menu li a {
+  font-size: 1.6rem;
+  padding: 5px;
+  color: #cfd2da;
+  text-decoration: none;
+}
+
+ul.dropdown-menu li a:hover {
+  color: #FFFFFF;
+}
+
+/* Show dropdown on hover */
+ul.main-menu li:hover ul.dropdown-menu {
+  display: block; /* Show dropdown when hovering over the main link */
+}
+
+/* Mobile Styling for dropdown */
+@media (max-width: 768px) {
+  ul.main-menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  ul.dropdown-menu {
+    position: static; /* Stack dropdowns in mobile */
+    display: none;
+    width: 100%;
+  }
+
+  ul.main-menu li:hover ul.dropdown-menu {
+    display: block;
+  }
+}
+
 
 /* Utility classes */
 .hide {
