@@ -24,67 +24,121 @@
     <!-- Visit: https://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
     
   </head>
-  
   <body>
 
     <header id="header">
       <img src="">
       <h1>About ME</h1>
-      
-      <!-- Menu link fragment #id should match a div id. Example: <a href="#home"> links to <div id="home"></div>  -->
+  
+      <!-- Main menu with dropdowns -->
       <ul class="main-menu">
-        <li><a href="#home">Home</a></li>     
-        <li><a href="#research">Research</a></li>
-        <li><a href="#interest">Interests</a></li>
-        <li><a href="#dofe">Duke of Edinburgh</a></li>
-
-      </ul>                 
+        <li><a href="#home">Home</a></li>
+  
+        <li class="dropdown">
+          <a href="#research">Research</a>
+          <!-- Dropdown for Research Subsections -->
+          <ul class="dropdown-menu">
+            <li><a href="#research-subsection1">Project 1</a></li>
+            <li><a href="#research-subsection2">Project 2</a></li>
+            <li><a href="#research-subsection3">Project 3</a></li>
+          </ul>
+        </li>
+  
+        <li class="dropdown">
+          <a href="#interest">Interests</a>
+          <!-- Dropdown for Interests Subsections -->
+          <ul class="dropdown-menu">
+            <li><a href="#interest-subsection1">Hobbies</a></li>
+            <li><a href="#interest-subsection2">Travel</a></li>
+          </ul>
+        </li>
+  
+        <li class="dropdown">
+          <a href="#dofe">Duke of Edinburgh</a>
+          <!-- Dropdown for Duke of Edinburgh Subsections -->
+          <ul class="dropdown-menu">
+            <li><a href="#dofe-subsection1">Bronze</a></li>
+            <li><a href="#dofe-subsection2">Silver</a></li>
+          </ul>
+        </li>
+      </ul>
     </header>
-   
+  
     <div id="container">
       <div class="inner">
-        <div id="content"> 
-          
+        <div id="content">
+  
+          <!-- Home Section -->
           <div id="home" class="content-region hide">
             <h2>Home</h2>
-            <p>
-              This is a simple website describing me, Bruno Banas. Add resume bellow.
-            </p>
+            <p>This is a simple website describing me</p>
             <img src="resume.jpg">
           </div>
-          
+  
+          <!-- Research Section with Subsections -->
           <div id="research" class="content-region hide">
             <h2>Research</h2>
-            <p>
-             Summary of my reseach 
-            </p>
+            <p>Summary of my research</p>
+  
+            <div id="research-subsection1">
+              <h3>Project 1</h3>
+              <p>Details about research project 1.</p>
+            </div>
+  
+            <div id="research-subsection2">
+              <h3>Project 2</h3>
+              <p>Details about research project 2.</p>
+            </div>
+  
+            <div id="research-subsection3">
+              <h3>Project 3</h3>
+              <p>Details about research project 3.</p>
+            </div>
           </div>
-          
+  
+          <!-- Interests Section with Subsections -->
           <div id="interests" class="content-region hide">
-            <h2>Intersts outside of physics</h2>
-            <p>
-              Drop down menu with all my interests
-            </p>
+            <h2>Interests outside of physics</h2>
+  
+            <div id="interest-subsection1">
+              <h3>Hobbies</h3>
+              <p>Details about my hobbies.</p>
+            </div>
+  
+            <div id="interest-subsection2">
+              <h3>Travel</h3>
+              <p>Details about places I've traveled to.</p>
+            </div>
           </div>
-
+  
+          <!-- Duke of Edinburgh Section with Subsections -->
           <div id="dofe" class="content-region hide">
-            <h2>Duke of Edinburgh award</h2>
-            <p>
-              Pellentesque nec nam aliquam sem et tortor consequat. Quisque sagittis purus sit amet volutpat consequat. Magna eget est lorem ipsum dolor. 
-            </p>
+            <h2>Duke of Edinburgh Award</h2>
+            <p>Overview of my Duke of Edinburgh achievements.</p>
+  
+            <div id="dofe-subsection1">
+              <h3>Bronze</h3>
+              <p>Details about my Bronze Award experience.</p>
+            </div>
+  
+            <div id="dofe-subsection2">
+              <h3>Silver</h3>
+              <p>Details about my Silver Award experience.</p>
+            </div>
           </div>
-          
+  
         </div>
       </div>
     </div>
-
-    <footer>  
+  
+    <footer>
       <h3>Contact information</h3>
-      banas.bruno@  12345678
+      <p>Email: banas.bruno@ 12345678</p>
     </footer>
-    
+  
     <!-- Load additional JS scripts here -->
     <script type="text/javascript" src="script.js"></script>
-    
+  
   </body>
+  
 </html>
