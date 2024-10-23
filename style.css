@@ -64,7 +64,7 @@ html {
   background-size:cover;
 }
 body {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 25px auto;
   padding-top: 40px; /* Adjust this value based on the height of your header */
 }
@@ -83,6 +83,22 @@ header {
   width: 100%;     /* Make it full width */
   background: rgba(0, 0, 0, 1); /* Semi-transparent background */
   z-index: 1000;  /* Ensure it stays above other content */
+}
+/**
+ * image styles
+ */
+
+.full-width-image {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensure there’s no inline spacing */
+  margin: 0 auto; /* Center the image if needed */
+}
+.half-width-image {
+  width: 50%;
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensure there’s no inline spacing */
+  margin: 0 auto; /* Center the image if needed */
 }
 
 /**
