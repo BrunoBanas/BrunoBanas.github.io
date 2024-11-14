@@ -88,6 +88,13 @@ header {
  * image styles
  */
 
+ .image-container {
+  display: flex;                /* Use flexbox to align items side by side */
+  align-items: center;          /* Center images vertically */
+  justify-content: center;       /* Center images horizontally within the container */
+  gap: 15px;                     /* Optional: space between images */
+}
+
 .full-width-image {
   width: 100%;
   height: auto; /* Maintain aspect ratio */
@@ -99,6 +106,20 @@ header {
   height: auto; /* Maintain aspect ratio */
   display: block; /* Ensure there’s no inline spacing */
   margin: 0 auto; /* Center the image if needed */
+}
+
+
+.quarter-width-image,
+.third-width-image {
+  height: auto;                 /* Maintain aspect ratio */
+}
+
+.quarter-width-image {
+  width: 25%;                   /* Define width without setting a fixed height */
+}
+
+.third-width-image {
+  width: 33%;                   /* Define width without setting a fixed height */
 }
 
 /**
